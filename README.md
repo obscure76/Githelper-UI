@@ -10,6 +10,7 @@ python-numpy
 python-scikitlearn
 python-pickle
 python-nltk
+python-requests
 
 
 copy the project to the document root of the apache server
