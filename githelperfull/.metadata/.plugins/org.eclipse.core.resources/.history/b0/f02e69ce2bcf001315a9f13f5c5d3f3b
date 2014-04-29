@@ -1,0 +1,129 @@
+<?php
+
+	$repo_path="/home/sthita/IR";
+    $directories = glob("$repo_path/*",GLOB_ONLYDIR);
+	
+	
+	
+	
+	$user_name=$_POST["userid"];
+	
+	$dbhandle = mysql_connect("localhost", "root", "sthita") or die("Unable to connect to MySQL");
+	$selected = mysql_select_db("githelper", $dbhandle) or die("Could not select examples");
+	$select_user="SELECT username from userinfo where username ='" . $user_name . "'";	
+	$user_result = mysql_query($select_user, $dbhandle);
+	if (!$user_result) {
+	echo "Could not successfully run query ($select_race) from DB: " . mysql_error();
+	exit ;
+     }
+	$num_results = mysql_num_rows($user_result); 
+	if ($num_results < 1){ 
+	printf ("User is not registered"); 
+		exit;
+	}
+	
+	
+	
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Git Helper</title>
+<link href="stylesheets/common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<!-- Start Header -->
+	<div id="header">
+		<div class="container">
+			<h1><a href="#" title="GITHELPER">GIT HELPER<span></span></a></h1>
+			<hr />
+			<!-- top navigation -->
+			<ul id="navigation">
+				<li class="active"><a href="#" title="Home">Home</a></li>
+				<li><a href="#" title="About">About</a></li>
+				<li><a href="#" title="Services">Create Repositories</a></li>
+				<li><a href="#" title="Portofolio">Fork Repositories</a></li>
+				<li><a href="#" title="Contact">Help</a></li>
+			</ul>
+			<hr />
+			<!-- banner message and building background -->
+			<div id="banner">
+				Welcome <?php echo $user_name; ?>
+			</div>
+			<hr />
+		</div>
+	</div>
+	<!-- Start Main Content -->
+	<div id="main" class="container">
+		<!-- left column (products and features) -->
+		<div id="leftcolumn">
+			<h3 class="leftbox">Sthitaprajna</h3>
+			<img src="git.png" alt="Image:product" class="git_image" />
+			<hr />
+		</div>
+		<!-- main content area -->
+		<div id="center" style="margin-left:45px;">
+			<div id="content">
+      <?php foreach ($directories as $key => $value) {?>
+                        
+                           <div class="article_wrapper">
+				<h2> <?= basename($value) ?></h2>
+                <a href="display_project_files.php?project=<?=$value?>&user_name=<?=$user_name?>">Read More</a>
+			</div>
+			<hr />
+                    
+                        
+                        <?php } ?>
+			</div>
+		</div>
+		<!-- product sales boxes -->
+		<div id="rightcolumn">
+			<div class="rightbox_wrapper">
+				<div class="rightbox">
+					
+				</div>
+			</div>
+			<div class="rightbox_wrapper">
+				<div class="rightbox">
+					<div class="product_wrapper">
+					</div>
+				</div>
+			</div>
+			<div class="rightbox_wrapper lastbox">
+				<div class="rightbox">
+					<div class="product_wrapper">
+					</div>
+				</div>
+			</div>
+			<hr />
+		</div>
+	</div>
+	<!-- Start Bottom Information -->
+	<div id="bottominfo">
+		<div class="container">
+			<!-- bottom left information -->
+			<div class="bottomcolumn">
+				
+			</div>
+			<!-- bottom center information -->
+			<div class="bottomcolumn">
+				
+			</div>
+			<!-- bottom right information -->
+			<div class="bottomcolumn bottomright">
+				
+			</div>
+			<hr />
+		</div>
+	</div>
+	<!-- Start Footer -->
+	<div id="footer">
+		<div class="container">
+			
+		</div>
+	</div>
+</body>
+</html>
+

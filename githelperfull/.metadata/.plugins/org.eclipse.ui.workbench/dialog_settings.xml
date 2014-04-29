@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="7" key="DIALOG_Y_ORIGIN"/>
+		<item value="295" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="NewWizardAction">
+		<item value="com.aptana.editor.php.NewPHPProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="com.aptana.ui.wizards.category"/>
+		</list>
+	</section>
+	<section name="ShowViewDialog">
+		<item value="375" key="DIALOG_WIDTH"/>
+		<item value="org.eclipse.ui.views.ResourceNavigator" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="76" key="DIALOG_Y_ORIGIN"/>
+		<item value="444" key="DIALOG_HEIGHT"/>
+		<item value="411" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui"/>
+		</list>
+	</section>
+	<section name="EditorSelectionDialog">
+		<item value="false" key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL"/>
+	</section>
+	<section name="ImportExportAction">
+	</section>
+</section>

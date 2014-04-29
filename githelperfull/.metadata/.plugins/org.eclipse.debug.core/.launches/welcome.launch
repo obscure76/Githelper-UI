@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.aptana.php.debug.core.launching.PHPExeLaunchConfigurationType">
+<stringAttribute key="ATTR_FILE" value="/GIT/welcome.php"/>
+<stringAttribute key="ATTR_FILE_FULL_PATH" value="/var/www/IR/GIT/welcome.php"/>
+<stringAttribute key="ATTR_INI_LOCATION" value="/etc/php5/cli/php.ini"/>
+<stringAttribute key="ATTR_LOCATION" value="/usr/bin/php"/>
+<booleanAttribute key="ATTR_USE_SPECIFIC_FILE" value="true"/>
+<stringAttribute key="com.aptana.php.debug.configurationDelegateClass" value="org2.eclipse.php.internal.debug.core.launching.XDebugExeLaunchConfigurationDelegate"/>
+<stringAttribute key="com.aptana.php.debug.php_debugger_id" value="org2.eclipse.php.debug.core.xdebugDebugger"/>
+<stringAttribute key="debugOutputEncoding" value="UTF-8"/>
+<stringAttribute key="debugTransferEncoding" value="UTF-8"/>
+<booleanAttribute key="firstLineBreakpoint" value="true"/>
+<stringAttribute key="org2.eclipse.php.debug.core.PHP_Project" value="/GIT"/>
+<booleanAttribute key="org2.eclipse.php.debug.core.RunWithDebugInfo" value="true"/>
+</launchConfiguration>
