@@ -1,7 +1,7 @@
 <?php
 
 	$repo_path="/home/sthita/IR";
-    $directories = glob("$repo_path/*",GLOB_ONLYDIR);
+        $directories = glob("$repo_path/*",GLOB_ONLYDIR);
 	
 	
 	
